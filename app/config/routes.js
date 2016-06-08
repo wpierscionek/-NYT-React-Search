@@ -15,10 +15,8 @@ var IndexRoute	= Router.IndexRoute;
 module.exports = (
 
 	<Route path='/' component ={Main} >
-
-	
-	<Route path='/' component ={Search} />
-{/*	<Route path='/' component ={Saved} />*/}
+{/*	<Route path='/' component ={Search} />
+	<Route path='/' component ={Saved} />*/}
 
 	<indexRoute component ={Main} />
 </Route>

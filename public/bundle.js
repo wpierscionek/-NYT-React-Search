@@ -26178,7 +26178,7 @@
 	module.exports = React.createElement(
 		Route,
 		{ path: '/', component: Main },
-		React.createElement(Route, { path: '/', component: Search }),
+		React.createElement(Route, { path: 'search', component: Search }),
 		React.createElement('indexRoute', { component: Main })
 	);
 
