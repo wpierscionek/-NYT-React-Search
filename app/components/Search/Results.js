@@ -1,14 +1,17 @@
 // Include React and React-Router dependencies
 var React = require('react');
-var Router = require('react-router')
+var Router = require('react-router');
 
-// Create the Main component
-var Main = React.createClass({
+// Query Component Declaration
+var Results = React.createClass({ 
 
 	render: function(){
 
 		return(
-			<div className="main-container">
+			<div className ="main-container">
+
+
+
 
 				<div className="row">
 					<div className="col-lg-12">
@@ -22,7 +25,7 @@ var Main = React.createClass({
 								  <li className="list-group-item">
 								
 									<h3>
-									  	<span><em>This is a saved article</em></span>
+									  	<span><em>Aliens!! Invade Paris</em></span>
 										<span className="btn-group pull-right" >
 											<button className="btn btn-default ">View Article</button>
 											<button className="btn btn-primary">Save</button>
@@ -92,11 +95,15 @@ var Main = React.createClass({
 				</div>
 
 
-			</div>
 
+
+
+			</div>
 		)
+
 	}
+
 });
 
 // Export the module back to the route
-module.exports = Main;
+module.exports = Results;
