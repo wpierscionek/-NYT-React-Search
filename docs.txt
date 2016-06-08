@@ -1,0 +1,10 @@
+Components needed
+-------------------
+Query component	  - input field
+		    search button
+		    api call
+
+
+Results component - takes results from api and display them
+		    view article button
+		    save article button
