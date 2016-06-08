@@ -1,15 +1,15 @@
-var React = require('react');
-var router = require('react-router');
+// var React = require('react');
+// var router = require('react-router');
 
-var Search = React.createClass({
-	render: function() {
-		return()
-	}
-})
-
-
+// var Search = React.createClass({
+// 	render: function() {
+// 		return()
+// 	}
+// })
 
 
 
 
-module.exports = Search;
+
+
+// module.exports = Search;
