@@ -20,6 +20,7 @@ var Main = React.createClass({
 				<div className="row">
 					<div className="col s12">
 						<img src="../public/images/img.jpg" alt="movies"  width="100%" height="600px"/>
+						<hr/>
 					</div>
 				</div>
 				{this.props.children}
