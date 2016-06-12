@@ -37,17 +37,23 @@ var Main = React.createClass({
 
 					{/*Jumbotron*/}
 					<div className="jumbotron">
-						<h2 className="text-center"><strong>New York Times Article Scrubber</strong></h2>
+						<h2 className="text-center"><strong>(ReactJS) New York Times Article Scrubber</strong></h2>
 						<h3 className="text-center">Search for and save articles of interest.</h3>
 					</div>
 
 
 					{/*Here we will load the sub components (Search or Saved */}
 					{/*These sub-components are getting passed as this.props.children*/}
-					<div className="container">
-						{this.props.children}
-					</div>
+					{this.props.children}
+
+					<footer>
+						<hr />
+						<p className="pull-right"><i className="fa fa-github" aria-hidden="true"></i> Proudly built using React.js</p>
+					</footer>
 				</div>
+
+
+
 			</div>
 		)
 	}
