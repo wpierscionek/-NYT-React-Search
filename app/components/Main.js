@@ -12,9 +12,8 @@ var Main = React.createClass({
 					<div className="nav-wrapper">
 						<a href="" className="brand-logo"><img src="../public/images/logo.gif" /></a>
 						<ul className="nav-mobile" className="right hide-on-med-and-down">
-							<li><a href="">link</a></li>
-							<li><a href="">link</a></li>
-							<li><a href="">link</a></li>
+							<li><a href="">Search</a></li>
+							<li><a href="">Saved</a></li>
 						</ul>
 					</div>
 				</nav>
