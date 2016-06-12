@@ -46,19 +46,13 @@
 
 	'use strict';
 
-	// Include the Main React Dependencies
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 
-	// Grab the proeprty associated with the Router
 	var Router = __webpack_require__(159).Router;
 
-	// Grabs the Routes
 	var routes = __webpack_require__(206);
 
-	// Renders the contents according to the route page.
-	// Displays the contents in the div app of index.html
-	// Note how ReactDOM takes in two parameters (the contents and the location)
 	ReactDOM.render(React.createElement(
 		Router,
 		null,
@@ -24333,22 +24327,16 @@
 
 	'use strict';
 
-	// Inclue the React library
 	var React = __webpack_require__(1);
-
-	// Include the Router
 	var Router = __webpack_require__(159);
-	var Route = Router.Route;
 
-	//  Include the IndexRoute (catch-all route)
+	var Route = Router.Route;
 	var IndexRoute = Router.IndexRoute;
 
-	// Reference the high-level components
 	var Main = __webpack_require__(207);
 	var Saved = __webpack_require__(208);
 	var Search = __webpack_require__(209);
 
-	// Export the Routes
 	module.exports = React.createElement(
 		Route,
 		{ path: '/', component: Main },
@@ -24363,11 +24351,11 @@
 
 	'use strict';
 
-	// Include React and React-Router dependencies
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(159);
 
-	// Create the Main component
 	var Main = React.createClass({
 		displayName: 'Main',
 
@@ -24376,18 +24364,65 @@
 
 			return React.createElement(
 				'div',
-				{ className: 'main-container' },
+				{ className: 'container' },
 				React.createElement(
-					'h1',
+					'nav',
 					null,
-					'Main.js'
+					React.createElement(
+						'div',
+						{ className: 'nav-wrapper' },
+						React.createElement(
+							'a',
+							{ href: '', className: 'brand-logo' },
+							React.createElement('img', { src: '../public/images/logo.gif' })
+						),
+						React.createElement(
+							'ul',
+							_defineProperty({ className: 'nav-mobile' }, 'className', 'right hide-on-med-and-down'),
+							React.createElement(
+								'li',
+								null,
+								React.createElement(
+									'a',
+									{ href: '' },
+									'link'
+								)
+							),
+							React.createElement(
+								'li',
+								null,
+								React.createElement(
+									'a',
+									{ href: '' },
+									'link'
+								)
+							),
+							React.createElement(
+								'li',
+								null,
+								React.createElement(
+									'a',
+									{ href: '' },
+									'link'
+								)
+							)
+						)
+					)
+				),
+				React.createElement(
+					'div',
+					{ className: 'row' },
+					React.createElement(
+						'div',
+						{ className: 'col s12' },
+						React.createElement('img', { src: '../public/images/img.jpg', alt: 'movies', width: '100%', height: '600px' })
+					)
 				),
 				this.props.children
 			);
 		}
 	});
 
-	// Export the module back to the route
 	module.exports = Main;
 
 /***/ },
@@ -24396,11 +24431,9 @@
 
 	'use strict';
 
-	// Include React and React-Router dependencies
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(159);
 
-	// Create the Main component
 	var Saved = React.createClass({
 		displayName: 'Saved',
 
@@ -24419,7 +24452,6 @@
 		}
 	});
 
-	// Export the module back to the route
 	module.exports = Saved;
 
 /***/ },
@@ -24428,11 +24460,9 @@
 
 	'use strict';
 
-	// Include React and React-Router dependencies
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(159);
 
-	// Create the Main component
 	var Search = React.createClass({
 		displayName: 'Search',
 
@@ -24451,7 +24481,6 @@
 		}
 	});
 
-	// Export the module back to the route
 	module.exports = Search;
 
 /***/ }
