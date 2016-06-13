@@ -1,31 +1,66 @@
 var React = require('react');
-var Router = require('react-router')
+var Form = require('./Children/Form');
+var Results = require('./Children/Results');
+var helpers = require('./utils/helpers.js');
+
 
 var Main = React.createClass({
+
+	getInitialState: function(){
+		return {
+			searchTerm: "",
+			results: ""
+		}
+	},	
+
+	setTerm: function(term){
+		this.setState({
+			searchTerm: term
+		})
+	},
+
+	componentDidUpdate: function(prevProps, prevState){
+
+		if(prevState.searchTerm != this.state.searchTerm){
+			console.log("UPDATED");
+
+			helpers.runQuery(this.state.searchTerm)
+				.then(function(data){
+					if (data != this.state.results)
+					{
+						console.log("HERE");
+
+						this.setState({
+							results: data
+						})		
+					}
+
+
+				}.bind(this))		
+		}
+	},
+
 
 	render: function(){
 
 		return(
 
-			<div className='container'>
+			<div className="container">
 				<nav>
 					<div className="nav-wrapper">
-						<a href="" className="brand-logo"><img src="../public/images/logo.gif" /></a>
+						<a href="" className="brand-logo">IMovie</a>
 						<ul className="nav-mobile" className="right hide-on-med-and-down">
-							<li><a href="">Search</a></li>
-							<li><a href="">Saved</a></li>
+							<li><a href="#/form">Search</a></li>
+							<li><a href="#/results">Saved</a></li>
 						</ul>
 					</div>
 				</nav>
-				<div className="row">
-					<div className="col s12">
-						<img src="../public/images/img.jpg" alt="movies"  width="100%" height="600px"/>
-						<hr/>
+					<div className="row">
+						<Form setTerm={this.setTerm} />
+						<Results list={this.state.results} />
 					</div>
-				</div>
-				{this.props.children}
 			</div>
-			)
+		)
 	}
 });
 
