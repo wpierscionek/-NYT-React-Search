@@ -3,7 +3,7 @@ var axios = require('axios');
 var helpers = {
 
 	runQuery: function(movies){
-		var queryURL = "http://www.omdbapi.com/?t="+movies+"&y=&plot=full";
+		var queryURL = "https://www.omdbapi.com/?t="+movies+"&y=&plot=full";
 
 
 		return axios.get(queryURL)
